@@ -13,7 +13,7 @@ const websites = [
     description:
       "A polished landing page concept for a creative studio, photographer, florist, or boutique service provider.",
     tech: ["Next.js", "Tailwind CSS", "Landing Page Design"],
-    demo: "https://YOUR-DEMO-LINK.vercel.app",
+    demo: "https://demo-studio-ruby.vercel.app/",
   },
   {
     title: "Demo Coffee Co.",
