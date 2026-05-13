@@ -157,7 +157,7 @@ export default function Websites() {
           </p>
 
           <h2 className="mb-4 text-4xl font-bold">
-            Simple, polished, and built to work.
+            Simple, polished, and built to work for your business.
           </h2>
 
           <p className="mb-8 text-[#DCE7DA]">
