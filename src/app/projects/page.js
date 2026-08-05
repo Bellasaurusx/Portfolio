@@ -61,8 +61,8 @@ export default function Projects() {
             <Image
               src="/images/valentino-web-design-logo.png"
               alt="Valentino Web Design"
-              width={280}
-              height={80}
+              width={290}
+              height={100}
               priority
               className="h-14 w-auto md:h-16"
             />
