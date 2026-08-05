@@ -1,4 +1,6 @@
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F4F6F3] text-[#1E1E1E]">
@@ -6,12 +8,19 @@ export default function Home() {
       <nav className="fixed top-0 z-50 w-full border-b border-[#DDE3DA]/70 bg-[#F4F6F3]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
           
-          {/* Logo / Name */}
+          {/* Logo */}
           <a
             href="/"
-            className="text-lg font-semibold tracking-tight text-[#1E1E1E] transition duration-300 ease-out hover:text-[#2F4F3E]"
+            className="flex items-center transition duration-300 ease-out hover:opacity-90"
           >
-            Isabella Valentino
+            <Image
+              src="/images/valentino-web-design-logo.png"
+              alt="Valentino Web Design"
+              width={250}
+              height={70}
+              priority
+              className="h-12 w-auto md:h-14"
+            />
           </a>
 
           {/* Desktop Navigation */}

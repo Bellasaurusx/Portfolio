@@ -35,12 +35,14 @@ export default function Websites() {
       <nav className="fixed top-0 z-50 w-full border-b border-[#DDE3DA]/70 bg-[#F4F6F3]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
           {/* Logo / Name */}
-          <a
-            href="/"
-            className="text-lg font-semibold tracking-tight text-[#1E1E1E] transition duration-300 ease-out hover:text-[#2F4F3E]"
-          >
-            Isabella Valentino
-          </a>
+          <Image
+            src="/images/valentino-web-design-logo.png"
+            alt="Valentino Web Design"
+            width={280}
+            height={80}
+            priority
+            className="h-14 w-auto md:h-16"
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-10 text-sm font-medium text-[#4D5A52] md:flex">
