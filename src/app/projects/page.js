@@ -1,4 +1,6 @@
 /* ================= PROJECT DATA ================= */
+import Image from "next/image";
+
 const projects = [
   {
     title: "BeeLine",
