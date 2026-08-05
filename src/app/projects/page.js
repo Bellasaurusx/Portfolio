@@ -54,51 +54,53 @@ export default function Projects() {
   return (
     <main className="min-h-screen bg-[#F4F6F3] text-[#1E1E1E]">
       {/* ================= NAVIGATION ================= */}
-        <nav className="fixed top-0 z-50 w-full border-b border-[#DDE3DA]/70 bg-[#F4F6F3]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
-            
-            {/* Logo / Name */}
+      <nav className="fixed top-0 z-50 w-full border-b border-[#DDE3DA]/70 bg-[#F4F6F3]/80 backdrop-blur-xl">
+        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 md:px-12">
+          
+          {/* Logo */}
+          <a href="/" className="flex items-center">
             <Image
               src="/images/valentino-web-design-logo.png"
               alt="Valentino Web Design"
-              width={290}
-              height={100}
+              width={320}
+              height={80}
               priority
-              className="h-14 w-auto md:h-16"
+              className="h-auto w-64 md:w-72"
             />
+          </a>
 
-            {/* Desktop Navigation */}
-            <div className="hidden items-center gap-10 text-sm font-medium text-[#4D5A52] md:flex">
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-12 text-base font-medium text-[#4D5A52] md:flex">
             <a
-                href="/"
-                className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+              href="/"
+              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
             >
-                Home
+              Home
             </a>
 
             <a
-                href="/projects"
-                className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+              href="/projects"
+              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
             >
-                Projects
+              Projects
             </a>
 
             <a
-                href="/websites"
-                className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+              href="/websites"
+              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
             >
-                Web Design
+              Web Design
             </a>
 
             <a
-                href="/#contact"
-                className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+              href="/#contact"
+              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
             >
-                Contact
+              Contact
             </a>
-            </div>
+          </div>
         </div>
-        </nav>
+      </nav>
 
       {/* ================= PROJECTS HERO ================= */}
       <section className="px-6 pb-16 pt-40 md:px-12">

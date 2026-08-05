@@ -35,22 +35,24 @@ export default function Websites() {
     <main className="min-h-screen bg-[#F4F6F3] text-[#1E1E1E]">
       {/* ================= NAVIGATION ================= */}
       <nav className="fixed top-0 z-50 w-full border-b border-[#DDE3DA]/70 bg-[#F4F6F3]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
-          {/* Logo / Name */}
-          <Image
-            src="/images/valentino-web-design-logo.png"
-            alt="Valentino Web Design"
-            width={280}
-            height={80}
-            priority
-            className="h-14 w-auto md:h-16"
-          />
+        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 md:px-12">
+          {/* Logo */}
+          <a href="/" className="flex items-center">
+            <Image
+              src="/images/valentino-web-design-logo.png"
+              alt="Valentino Web Design"
+              width={320}
+              height={80}
+              priority
+              className="h-auto w-64 md:w-72"
+            />
+          </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-10 text-sm font-medium text-[#4D5A52] md:flex">
+          <div className="hidden items-center gap-12 text-base font-medium text-[#4D5A52] md:flex">
             <a
               href="/"
-              className="transition-all duration-300 hover:text-[#2F4F3E]"
+              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
             >
               Home
             </a>
@@ -79,55 +81,57 @@ export default function Websites() {
         </div>
       </nav>
 
-      {/* ================= WEBSITE BUILDING HERO ================= */}
-      <section className="px-6 pb-16 pt-40 md:px-12">
+      {/* ================= PAGE INTRO ================= */}
+      <section className="px-6 pb-14 pt-40 md:px-12">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#5F6B63]">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#5F6B63]">
             Web Design
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-            Modern websites for your business.
+          <h1 className="mb-5 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
+            Websites built for real businesses.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#4D5A52]">
-            Clean, modern websites designed to help businesses build trust,
-            stand out online, and make a stronger first impression.
+          <p className="max-w-2xl text-lg leading-relaxed text-[#4D5A52]">
+            A selection of website concepts designed around clear messaging,
+            thoughtful layouts, and a smooth experience on every device.
           </p>
         </div>
       </section>
 
       {/* ================= WEBSITE SAMPLE CARDS ================= */}
-      <section className="px-6 pb-24 md:px-12">
-        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
+      <section className="px-6 pb-28 md:px-12">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 xl:grid-cols-3">
           {websites.map((site) => (
             <article
               key={site.title}
-              className="overflow-hidden rounded-3xl border border-[#DDE3DA] bg-white/75 shadow-sm backdrop-blur transition duration-300 ease-out hover:-translate-y-2 hover:shadow-xl"
+              className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#DDE3DA] bg-white shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
-              {/* ================= WEBSITE IMAGE ================= */}
+              {/* Website Image */}
               <div className="overflow-hidden border-b border-[#DDE3DA]">
-                <img
+                <Image
                   src={site.image}
                   alt={`${site.title} website preview`}
-                  className="h-52 w-full object-cover transition duration-500 ease-out hover:scale-105"
+                  width={700}
+                  height={420}
+                  className="h-48 w-full object-cover transition duration-500 ease-out hover:scale-105"
                 />
               </div>
 
-              {/* ================= CARD CONTENT ================= */}
-              <div className="p-6">
-                <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[#5F6B63]">
+              {/* Card Content */}
+              <div className="flex flex-1 flex-col p-7">
+                <p className="mb-3 text-xs font-medium uppercase tracking-[0.22em] text-[#5F6B63]">
                   {site.type}
                 </p>
 
-                <h2 className="mb-4 text-2xl font-bold">{site.title}</h2>
+                <h2 className="mb-3 text-2xl font-bold">{site.title}</h2>
 
                 <p className="mb-6 leading-relaxed text-[#4D5A52]">
                   {site.description}
                 </p>
 
-                {/* ================= TECH TAGS ================= */}
-                <div className="mb-8 flex flex-wrap gap-2">
+                {/* Tech Tags */}
+                <div className="mb-7 flex flex-wrap gap-2">
                   {site.tech.map((item) => (
                     <span
                       key={item}
@@ -138,12 +142,12 @@ export default function Websites() {
                   ))}
                 </div>
 
-                {/* ================= DEMO BUTTON ================= */}
+                {/* Demo Button */}
                 <a
                   href={site.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block rounded-2xl border border-[#2F4F3E] px-6 py-3 text-[#2F4F3E] transition duration-300 ease-out hover:bg-[#2F4F3E] hover:text-white"
+                  className="mt-auto inline-flex w-fit rounded-xl border border-[#2F4F3E] px-5 py-2.5 text-sm font-medium text-[#2F4F3E] transition duration-300 ease-out hover:bg-[#2F4F3E] hover:text-white"
                 >
                   View Live Demo
                 </a>
@@ -154,17 +158,17 @@ export default function Websites() {
       </section>
 
       {/* ================= FREELANCE CTA SECTION ================= */}
-      <section className="px-6 pb-24 md:px-12">
-        <div className="mx-auto max-w-4xl rounded-3xl bg-[#2F4F3E] p-8 text-center text-white md:p-12">
+      <section className="px-6 pb-28 md:px-12">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-[#2F4F3E] px-8 py-14 text-center text-white md:px-12">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C9D6C7]">
             Need a Website?
           </p>
 
-          <h2 className="mb-4 text-4xl font-bold">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
             Simple, polished, and built to work for your business.
           </h2>
 
-          <p className="mb-8 text-[#DCE7DA]">
+          <p className="mx-auto mb-8 max-w-2xl text-[#DCE7DA]">
             Modern websites designed to feel polished, intuitive, and aligned
             with the quality of your business.
           </p>

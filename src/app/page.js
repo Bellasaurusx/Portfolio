@@ -4,57 +4,55 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F4F6F3] text-[#1E1E1E]">
-      {/* ================= NAVIGATION ================= */}
+
+          {/* ================= NAVIGATION ================= */}
       <nav className="fixed top-0 z-50 w-full border-b border-[#DDE3DA]/70 bg-[#F4F6F3]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
-          
-          {/* Logo */}
+        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 md:px-12">
+    
+    {/* Logo */}
+        <a href="/" className="flex items-center">
+          <Image
+            src="/images/valentino-web-design-logo.png"
+            alt="Valentino Web Design"
+            width={320}
+            height={80}
+            priority
+            className="h-auto w-64 md:w-72"
+          />
+        </a>
+
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-12 text-base font-medium text-[#4D5A52] md:flex">
           <a
             href="/"
-            className="flex items-center transition duration-300 ease-out hover:opacity-90"
+            className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
           >
-            <Image
-              src="/images/valentino-web-design-logo.png"
-              alt="Valentino Web Design"
-              width={250}
-              height={70}
-              priority
-              className="h-12 w-auto md:h-14"
-            />
+            Home
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden items-center gap-10 text-sm font-medium text-[#4D5A52] md:flex">
-            <a
-              href="/"
-              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
-            >
-              Home
-            </a>
+          <a
+            href="/projects"
+            className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+          >
+            Projects
+          </a>
 
-            <a
-              href="/projects"
-              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
-            >
-              Projects
-            </a>
+          <a
+            href="/websites"
+            className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+          >
+            Web Design
+          </a>
 
-            <a
-              href="/websites"
-              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
-            >
-              Web Design
-            </a>
-
-            <a
-              href="/#contact"
-              className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
-            >
-              Contact
-            </a>
-          </div>
+          <a
+            href="/#contact"
+            className="transition-all duration-300 ease-out hover:text-[#2F4F3E]"
+          >
+            Contact
+          </a>
         </div>
-      </nav>
+      </div>
+    </nav>
 
       {/* ================= HERO SECTION ================= */}
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20 text-center">
